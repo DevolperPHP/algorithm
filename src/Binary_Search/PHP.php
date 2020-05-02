@@ -43,5 +43,5 @@ else
 echo "Element is present at index ", 
 							$result; 
 							
-// This code is contributed by anuj_67. 
+
 ?> 
