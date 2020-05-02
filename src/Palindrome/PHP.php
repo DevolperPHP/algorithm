@@ -1,4 +1,3 @@
-//using strrev function
 function palindrome($str){
   if(strtolower($str) === strtolower(strrev($str))){
     return true;
@@ -14,10 +13,6 @@ if(palindrome("Malayalam")){
 }
 
 
-
-
-
-//using loop
 function palindrome2($str){
   $strrev = "";
   
