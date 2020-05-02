@@ -7,10 +7,10 @@ int main()
 	int e;
 	int max;
 
-	cout << "the number";
+	cout << "Enter number1: ";
 	cin >> e;
 
-	cout << "how many number you want";
+	cout << "Enter number2: ";
 	cin >> max;
 
 	for (i = 0; i <= max; i++) {
