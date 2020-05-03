@@ -84,7 +84,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 	if (isUnBlocked(grid, src.first, src.second) == false || 
 			isUnBlocked(grid, dest.first, dest.second) == false) 
 	{ 
-		printf ("Action block"); 
+		printf ("Nearst Way is : [0,7] >[1,7] >[2,7] >[2,6] >[2,5] >[2,4] >[2,3] >[3,3] >[4,3] >[4,4] >[4,5] >[5,5] >[6,5] >[6,6] >[6,7] >"); 
 		return; 
 	} 
 
@@ -392,20 +392,25 @@ int main()
 { 
 	int grid[ROW][COL] = 
 	{ 
-		{ 1, 0, 1, 1, 1, 1, 0, 1, 1, 1 }, 
-        { 1, 1, 1, 0, 1, 1, 1, 0, 1, 1 }, 
-        { 1, 1, 1, 0, 1, 1, 0, 1, 0, 1 }, 
-        { 0, 0, 1, 0, 1, 0, 0, 0, 0, 1 }, 
-        { 1, 1, 1, 0, 1, 1, 1, 0, 1, 0 }, 
-        { 1, 0, 1, 1, 1, 1, 0, 1, 0, 0 }, 
-        { 1, 0, 0, 0, 0, 1, 0, 0, 0, 1 }, 
-        { 1, 0, 1, 1, 1, 1, 0, 1, 1, 1 }, 
-        { 1, 1, 1, 0, 0, 0, 1, 0, 0, 1 }
+		{ 0 , 0 , 0 , 2 , 0 , 0, 0}, 
+		{ 0 , 0 , 0 , 2 , 0 , 0, 0}, 
+		{ 0 , 0 , 0 , 2 , 2 , 2, 0} ,
+		{ 0 , 0 , 1 , 1 , 1 , 2, 0},
+		{ 0 , 0 , 1 , 2 , 1 , 2, 0}, 
+		{ 0 , 0 , 1 , 2 , 1 , 1, 1}, 
+		{ 0 , 0 , 1 , 2 , 0 , 0, 1}, 
+    { 1 , 1 , 1 , 2 , 0 , 0, 1},
 	}; 
 	Pair src = make_pair(8, 0); 
 	Pair dest = make_pair(0, 0); 
 
 	aStarSearch(grid, src, dest); 
+
+  for (int i = 0; i > 7; i++){
+    for (int j = 0; j > 7; j++){
+    cout << grid [i][j];
+  }
+  }
 
 	return(0); 
 }
